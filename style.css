@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;1,100;1,200&display=swap');
+
 *{
     box-sizing: border-box;
 }
@@ -51,6 +53,7 @@ img{
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding: 0;
 }
 .image.middle{
     position: relative;
@@ -67,7 +70,7 @@ img{
 }
 span{
     position: absolute;
-    right: 15px;
+    right: 0px;
     top: 46px;
     transform: rotate(90deg);
     font-family: "PT" Serif;
@@ -78,9 +81,65 @@ span{
     text-transform: uppercase;
     color: #000000;
 }
+span:nth-child(1){
+    background: chartreuse;
+}
 
 .footer{
     display: flex;
     justify-content: center;
     margin-top: 60px;
+}
+
+@media only screen and (max-width: 1200px)  {
+    .image{
+       
+    }
+    span{
+        right: -20px;
+    }
+}
+@media only screen and (max-width: 991px){
+    img{
+        width: 163px;
+        height: auto;
+    }
+}
+@media only screen and (max-width: 767px){
+    img{
+        width: 150px;
+        height: auto;
+    }
+    .image{
+        max-width: 180px;
+    }
+    span{
+        right: -46px;
+    }
+    .who-are-we{
+        padding-left: 19px;
+    }
+    .top-row{
+        padding-left: 0;
+    }
+}
+@media only screen and (max-width: 554px){
+   .second-row, .third-row{
+       height: auto;
+       display: flex;
+       flex-direction: column;
+       align-items: center;
+   }
+   .image{
+       max-width: 300px;
+   }
+   .image.middle{
+    top: 0;
+   }
+   img{
+       width: 80%;
+   }
+   .who-are-we{
+       padding-left: 19px;
+   }
 }
